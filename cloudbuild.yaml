@@ -3,3 +3,5 @@ steps:
   args: ['build', '-t', 'gcr.io/contiunousi/web:$COMMIT_SHA','.']
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/contiunousi/web:$COMMIT_SHA']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['beta', 'run', 'deploy', 'contiunousi', '--region=asia-east1', '--platform=managed', '--image=gcr.io/contiunousi/web:$COMMIT_SHA']
