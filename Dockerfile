@@ -4,4 +4,4 @@ WORKDIR /app
 
 ADD . /app
 
-CMD node server.js
+CMD gsutil rsync -rd -x https://github.com/gn01763009/web.git . gs://reggie.life
