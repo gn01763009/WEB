@@ -1,5 +1,5 @@
 # Stage 0 - Build Frontend Assets
-FROM node:10.24.1-alpine3.11 as build
+FROM node:10.11.0-alpine as build
 
 WORKDIR /app
 COPY package*.json ./
