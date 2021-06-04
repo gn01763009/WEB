@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
 // import { graphql } from "gatsby"
-import Playgrounds from "../components/Playgrounds"
+import Playgrounds from "../components/playgrounds"
 // ...GatsbyImageSharpFluid
 
 const PlaygroundPage = () => {
