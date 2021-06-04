@@ -5,6 +5,7 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
+RUN yarn global add gatsby-cli
 RUN gatsby build
 
 # Stage 1 - Serve Frontend Assets
