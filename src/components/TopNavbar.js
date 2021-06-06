@@ -21,7 +21,11 @@ const TopNavbar = () => {
   return (
     <nav className="topnavbar">
       <div className="topnav-center">
-        <a href="https://github.com/gn01763009/WEB" className="topnav-link">
+        <a
+          href="https://github.com/gn01763009/WEB"
+          className="topnav-link"
+          target="_blank"
+        >
           Github
           <FaLink></FaLink>
         </a>
