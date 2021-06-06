@@ -5,11 +5,14 @@ import { FaLink } from "react-icons/fa"
 // import DarkMode from "./DarkMode"
 const TopNavbar = () => {
   const [theme, setTheme] = React.useState("dark")
-  if (localStorage.theme === "dark") {
-    darkTheme(theme)
-  } else {
-    lightTheme(theme)
+  if (typeof window !== "undefined") {
+    if (localStorage.theme === "dark") {
+      darkTheme(theme)
+    } else {
+      lightTheme(theme)
+    }
   }
+
   const toggleTheme = () => {
     theme === "dark" ? setTheme("light") : setTheme("dark")
     if (theme === "dark") {
@@ -25,6 +28,7 @@ const TopNavbar = () => {
           href="https://github.com/gn01763009/WEB"
           className="topnav-link"
           target="_blank"
+          rel="noreferrer"
         >
           Github
           <FaLink></FaLink>
