@@ -1,6 +1,5 @@
 import React from "react"
 import DarkMode from "./DarkMode"
-import $ from "jquery"
 import { darkTheme, lightTheme } from "../components/DarkTheme"
 import { FaLink } from "react-icons/fa"
 // import DarkMode from "./DarkMode"
