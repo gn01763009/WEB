@@ -1,7 +1,24 @@
 import React from "react"
+import DarkMode from "./DarkMode"
+import $ from "jquery"
+import { darkTheme, lightTheme } from "../components/DarkTheme"
 import { FaLink } from "react-icons/fa"
-
-const TopNavbar = ({ theme, toggleTheme }) => {
+// import DarkMode from "./DarkMode"
+const TopNavbar = () => {
+  const [theme, setTheme] = React.useState("dark")
+  if (localStorage.theme === "dark") {
+    darkTheme(theme)
+  } else {
+    lightTheme(theme)
+  }
+  const toggleTheme = () => {
+    theme === "dark" ? setTheme("light") : setTheme("dark")
+    if (theme === "dark") {
+      localStorage.setItem("theme", darkTheme(theme))
+    } else {
+      localStorage.setItem("theme", lightTheme(theme))
+    }
+  }
   return (
     <nav className="topnavbar">
       <div className="topnav-center">
@@ -9,13 +26,7 @@ const TopNavbar = ({ theme, toggleTheme }) => {
           Github
           <FaLink></FaLink>
         </a>
-        <div className="topnav-info">
-          <div>Display</div>
-          <label className="topnav-theme">
-            <input type="checkbox" onClick={toggleTheme} />
-            <span className="check" />
-          </label>
-        </div>
+        <DarkMode localStorage={localStorage} toggleTheme={toggleTheme} />
       </div>
     </nav>
   )

@@ -27,6 +27,4 @@ const Project = ({ descript, title, url, stack, image }) => {
   )
 }
 
-Project.propTypes = {}
-
 export default Project

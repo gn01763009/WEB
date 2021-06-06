@@ -6,24 +6,15 @@ import Skills from "../components/skills"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import TopNavbar from "../components/TopNavbar"
-import { darkTheme, lightTheme } from "../components/DarkTheme"
 export default ({ data }) => {
-  const [theme, setTheme] = React.useState("dark")
-  const toggleTheme = () => {
-    theme === "dark" ? setTheme("light") : setTheme("dark")
-    if (theme === "dark") {
-      darkTheme(theme)
-    } else {
-      lightTheme(theme)
-    }
-  }
   const {
     allStrapiProjects: { nodes: projects },
   } = data
+
   return (
     <React.Fragment>
       <Layout>
-        <TopNavbar theme={theme} toggleTheme={toggleTheme} />
+        <TopNavbar />
         <Hero />
         <Jobs />
         <Projects projects={projects} title="featured projects" showLink />

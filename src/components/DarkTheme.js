@@ -1,3 +1,4 @@
+// origin
 export function darkTheme(theme) {
   colorInxDark.map(color => {
     document.documentElement.style.setProperty(
@@ -5,6 +6,7 @@ export function darkTheme(theme) {
       color.colorIndex
     )
   })
+  return "dark"
 }
 
 export function lightTheme(theme) {
@@ -14,6 +16,7 @@ export function lightTheme(theme) {
       color.colorIndex
     )
   })
+  return "light"
 }
 
 const colorInxDark = [
