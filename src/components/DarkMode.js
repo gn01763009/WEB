@@ -26,9 +26,7 @@ const DarkMode = () => {
       <label className="topnav-theme">
         <input className="helloworld" type="checkbox" onClick={toggleTheme} />
         <span
-          className={`check ${
-            localStorage.theme === "dark" ? "dark-span" : "light-span"
-          }`}
+          className={`check ${theme === "dark" ? "dark-span" : "light-span"}`}
         />
       </label>
     </div>
