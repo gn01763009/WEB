@@ -1,6 +1,25 @@
 import React from "react"
+import { darkTheme, lightTheme } from "./DarkTheme"
+const DarkMode = () => {
+  const [theme, setTheme] = React.useState("dark")
+  if (typeof window !== "undefined") {
+    if (localStorage.theme === "dark") {
+      darkTheme(theme)
+    } else {
+      lightTheme(theme)
+    }
+  } else {
+    let localStorage = { theme: "light" }
+  }
 
-const DarkMode = ({ localStorage, toggleTheme }) => {
+  const toggleTheme = () => {
+    theme === "dark" ? setTheme("light") : setTheme("dark")
+    if (theme === "dark") {
+      localStorage.setItem("theme", darkTheme(theme))
+    } else {
+      localStorage.setItem("theme", lightTheme(theme))
+    }
+  }
   return (
     <div className="topnav-info">
       <div>Display</div>
