@@ -5,7 +5,7 @@ export default [
     id: 1,
     icon: <FaCode className="skill-icon" />,
     title: "web development",
-    text: `This is my first web !! I feeling quite interesting with developing a web, and I enjoy all the part of code, I will keep going !`,
+    text: `This is my first web !! I feeling quite interested with developing a web, and I enjoy all the part of code, I will keep going !`,
   },
   {
     id: 2,
