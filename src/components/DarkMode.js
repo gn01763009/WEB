@@ -1,6 +1,6 @@
 import React from "react"
 import { darkTheme, lightTheme } from "./DarkTheme"
-const DarkMode = () => {
+export const DarkMode = () => {
   const [theme, setTheme] = React.useState("dark")
   if (typeof window !== "undefined") {
     if (localStorage.theme === "dark") {
@@ -24,7 +24,7 @@ const DarkMode = () => {
     <div className="topnav-info">
       <div>Display</div>
       <label className="topnav-theme">
-        <input className="helloworld" type="checkbox" onClick={toggleTheme} />
+        <input onChange={toggleTheme} className="helloworld" type="checkbox" />
         <span
           className={`check ${theme === "dark" ? "dark-span" : "light-span"}`}
         />
