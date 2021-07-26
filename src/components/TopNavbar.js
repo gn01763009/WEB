@@ -1,6 +1,5 @@
 import React from "react"
 import DarkMode from "./DarkMode"
-import { darkTheme, lightTheme } from "../components/DarkTheme"
 import { FaLink } from "react-icons/fa"
 const TopNavbar = () => {
   return (

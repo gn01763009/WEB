@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/Layout"
 import { Link } from "gatsby"
 import Typed from "react-typed"
-// import SEO from "../components/SEO"
 
 const Error = () => {
   return (
