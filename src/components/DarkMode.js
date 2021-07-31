@@ -3,11 +3,7 @@ import { darkTheme, lightTheme } from "./DarkTheme"
 export const DarkMode = () => {
   const [theme, setTheme] = React.useState("dark")
   if (typeof window !== "undefined") {
-    if (localStorage.theme === "dark") {
-      darkTheme(theme)
-    } else {
-      lightTheme(theme)
-    }
+    localStorage.getItem("dark") ? darkTheme(theme) : lightTheme(theme)
   } else {
     let localStorage = { theme: "light" }
   }
